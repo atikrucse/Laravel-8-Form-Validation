@@ -12,7 +12,8 @@
   <body>
       <h1 class="bg-danger text-white p-2 text-center">Student Information Form</h1>
       <div class="container">
-          <form action="submitForm" method="post" class="bg-dark text-white p-5">
+          <form action="submitForm" method="post">
+              @csrf
               <div class="form-group">
                   <label for="name" class="text-warning">Name:</label>
                   <input type="text" name="name" class="form-control" placeholder="input your name">
@@ -25,7 +26,7 @@
                 <label for="address" class="text-warning">Address:</label>
                 <input type="text" name="address" class="form-control" placeholder="input your address">
             </div>
-            <input type="button" value="submit form" class="btn btn-warning btn-large">
+            <input type="submit" value="Submit Form" class="btn btn-warning btn-large">
           </form>
       </div>
 
