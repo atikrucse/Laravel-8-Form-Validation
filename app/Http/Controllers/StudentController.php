@@ -11,6 +11,11 @@ class StudentController extends Controller
     }
 
     public function submitForm(Request $request){
+        $this->validate($request, [
+            "name" => "required",
+            "email" => "required",
+            "password" => "required"
+        ]);
         echo '<pre>';
         print_r($request-> input());
         echo '</pre>';

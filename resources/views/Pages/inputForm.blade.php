@@ -12,6 +12,18 @@
   <body>
       <h1 class="bg-danger text-white p-2 text-center">Student Information Form</h1>
       <div class="container">
+          {{-- For Error --}}
+            @if ($errors->any())
+                    <div>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+            @endif
+
+
           <form action="submitForm" method="post">
               @csrf
               <div class="form-group">
