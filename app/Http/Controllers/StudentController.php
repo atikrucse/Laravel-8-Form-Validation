@@ -15,6 +15,10 @@ class StudentController extends Controller
             "name" => "required",
             "email" => "required",
             "address" => "required"
+        ],[
+            // Manually pass Error message
+            "name.required" => "You Can't leave name field empty",
+            "email.required" => "Email must needed"
         ]);
         echo '<pre>';
         print_r($request-> input());
