@@ -28,15 +28,15 @@
               @csrf
               <div class="form-group">
                   <label for="name" class="text-warning">Name:</label>
-                  <input type="text" name="name" class="form-control" placeholder="input your name">
+                  <input type="text" name="name" class="form-control" placeholder="input your name" value="{{old('name')}}">
               </div>
               <div class="form-group">
                 <label for="email" class="text-warning">Email:</label>
-                <input type="text" name="email" class="form-control" placeholder="abcd@email.com">
+                <input type="text" name="email" class="form-control" placeholder="abcd@email.com" value="{{old('email')}}">
             </div>
             <div class="form-group">
                 <label for="address" class="text-warning">Address:</label>
-                <input type="text" name="address" class="form-control" placeholder="input your address">
+                <input type="text" name="address" class="form-control" placeholder="input your address" value="{{old('address')}}">
             </div>
             <input type="submit" value="Submit Form" class="btn btn-warning btn-large">
           </form>

@@ -14,7 +14,7 @@ class StudentController extends Controller
         $this->validate($request, [
             "name" => "required",
             "email" => "required",
-            "password" => "required"
+            "address" => "required"
         ]);
         echo '<pre>';
         print_r($request-> input());
