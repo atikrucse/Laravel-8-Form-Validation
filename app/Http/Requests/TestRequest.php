@@ -32,7 +32,7 @@ class TestRequest extends FormRequest
     public function messages()
 {
     return [
-        'title.name' => 'You can not leave name field empty',
+        'name.required' => 'You can not leave name field empty',
     ];
 }
 }
