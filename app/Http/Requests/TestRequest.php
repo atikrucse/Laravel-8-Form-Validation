@@ -25,7 +25,7 @@ class TestRequest extends FormRequest
     {
         return [
             "name" => "required",
-            "email" => "required",
+            "email" => "required|unique:students",
             "address" => "required"
         ];
     }
@@ -33,6 +33,7 @@ class TestRequest extends FormRequest
 {
     return [
         'name.required' => 'You can not leave name field empty',
+        'email.unique' => 'This email is already in use'
     ];
 }
 }

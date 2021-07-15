@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests\TestRequest;
 
+use App\Models\Student;
+
 class StudentController extends Controller
 {
     public function form(){
@@ -30,9 +32,17 @@ class StudentController extends Controller
 
     //Method-3 Using Requests files
     public function submitForm(TestRequest $request){
-        echo '<pre>';
-        print_r($request-> all());
-        echo '</pre>';
+        $std = new Student();
+
+        $std->name = $request->name;
+        $std->email = $request->email;
+        $std->address = $request->address;
+
+        $std->save();
+
+        // echo '<pre>';
+        // print_r($request-> all());
+        // echo '</pre>';
     
     }
 }
