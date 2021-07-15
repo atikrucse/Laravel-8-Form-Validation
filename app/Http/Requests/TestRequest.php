@@ -29,4 +29,10 @@ class TestRequest extends FormRequest
             "address" => "required"
         ];
     }
+    public function messages()
+{
+    return [
+        'title.name' => 'You can not leave name field empty',
+    ];
+}
 }
