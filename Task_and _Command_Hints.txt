@@ -1,0 +1,11 @@
+Form Validation:
+
+Method-3:
+1. Create a new request file.
+    => php artisan make:request TestRequest.php
+2. Make Change in authorize()
+    -> return true;
+3. Define Rules in rules()
+4. Import Request file in Controller:
+    -> use App\Http\Requests\TestRequest;
+5. Use TestRequest instade of Request.
